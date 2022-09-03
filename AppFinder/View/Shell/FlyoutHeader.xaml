@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFinder.View.Shell.FlyoutHeader">
+    <Frame Style="{StaticResource CardView}">
+        <Frame.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="{StaticResource Primary}" Offset="0.1" />
+                <GradientStop Color="{StaticResource PrimaryDark}"  Offset="1.0" />
+            </LinearGradientBrush>
+        </Frame.Background>
+        <VerticalStackLayout Padding="10,10,10,10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Image 
+            Source="dotnet_bot.png"
+            SemanticProperties.Description="note : this has automatically scaled to a 100x100 png"
+            WidthRequest="100"
+            HeightRequest="100" />                
+        <Label Style="{StaticResource LargeLabel}" Text="{Binding AppName}" />
+        </VerticalStackLayout>
+    </Frame>
+</ContentView>
+
