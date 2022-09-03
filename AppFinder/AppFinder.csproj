@@ -10,10 +10,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>MonkeyFinder</ApplicationTitle>
+		<ApplicationTitle>AppFinder</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.monkeyfinder</ApplicationId>
+		<ApplicationId>com.hemptrac.myNewApp</ApplicationId>
 		<ApplicationIdGuid>ECD44DAE-B03E-4D8B-B427-71865961E696</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -22,7 +22,7 @@
 
 		<!-- Required for C# Hot Reload -->
 		<UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
-		<AssemblyName>MonkeyFinder</AssemblyName>
+		<AssemblyName>AppFinder</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -44,6 +44,7 @@
 	  <None Remove="Resources\Images\tab_gear.svg" />
 	  <None Remove="Resources\Images\tab_comments.svg" />
 	  <None Remove="Helpers\" />
+	  <None Remove="CommunityToolkit.Mvvm" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="View\Shell\" />
@@ -60,5 +61,8 @@
 	  <MauiXaml Update="View\Tabs\SettingsPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	</ItemGroup>
 </Project>

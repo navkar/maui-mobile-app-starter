@@ -30,22 +30,19 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <ShellContent
-        Shell.FlyoutItemIsVisible="True"
-        Shell.NavBarIsVisible="True"
-        Title="Monkeys"
-        ContentTemplate="{DataTemplate view:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Home">
+        <ShellContent Title="All" ContentTemplate="{DataTemplate view:MainPage}" />
+    </FlyoutItem>
 
-    <!--<TabBar>
+    <TabBar>
         <Tab Title="Discuss" Icon="tab_comments">
             <ShellContent Title="All" ContentTemplate="{DataTemplate view:MainPage}" />
-            <ShellContent Title="User" ContentTemplate="{DataTemplate view:SettingsPage}" />
+            <!--<ShellContent Title="User" ContentTemplate="{DataTemplate view:SettingsPage}" />-->
         </Tab>
         <Tab Title="Settings" Icon="tab_gear">
             <ShellContent ContentTemplate="{DataTemplate view:SettingsPage}" />
         </Tab>
-    </TabBar>-->
+    </TabBar>
 
 
 </Shell>
