@@ -27,29 +27,35 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiImage Include="Resources\Images\*" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+
+		<MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="View\Shell\" />
 	  <None Remove="View\Tabs\" />
-	  <None Remove="Resources\Images\tab_gear.svg" />
-	  <None Remove="Resources\Images\tab_comments.svg" />
 	  <None Remove="Helpers\" />
-	  <None Remove="CommunityToolkit.Mvvm" />
+	  <None Remove="Resources\Styles\" />
+	  <None Remove="Resources\AppIcon\appiconfg.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="View\Shell\" />
 	  <Folder Include="View\Tabs\" />
 	  <Folder Include="Helpers\" />
+	  <Folder Include="Resources\AppIcon\" />
+	  <Folder Include="Resources\Splash\" />
+	  <Folder Include="Resources\Styles\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="View\Shell\FlyoutHeader.xaml">
@@ -59,6 +65,15 @@
 	    <SubType></SubType>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Tabs\SettingsPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="View\FreshContentPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\Styles.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\Colors.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
 	</ItemGroup>

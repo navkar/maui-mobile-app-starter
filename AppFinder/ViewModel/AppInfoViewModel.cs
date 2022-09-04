@@ -14,7 +14,7 @@ namespace AppFinder.ViewModel
 
         public string AppBuild => AppInfo.BuildString;
 
-        public string AppVersionBuild => String.Format("v{0} b{1}", AppInfo.VersionString, AppInfo.BuildString);
+        public string AppVersionBuild => String.Format("v{0} ({1})", AppInfo.VersionString, AppInfo.BuildString);
 
         public string AppTheme => AppInfo.RequestedTheme.ToString();
 

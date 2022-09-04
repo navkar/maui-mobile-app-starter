@@ -4,45 +4,49 @@
     xmlns:flyout="clr-namespace:AppFinder.View.Shell"
     xmlns:view="clr-namespace:AppFinder.View"
     x:Class="AppFinder.AppShell"
-    FlyoutBackgroundColor="AliceBlue"
-    Shell.FlyoutItemIsVisible="True">
-	<Shell.FlyoutHeader>
+    Shell.FlyoutBehavior="Disabled">
+	<!--<Shell.FlyoutHeader>
 		<flyout:FlyoutHeader />
 	</Shell.FlyoutHeader>
 	<Shell.FlyoutFooter>
 		<flyout:FlyoutFooter />
-	</Shell.FlyoutFooter>
+	</Shell.FlyoutFooter>-->
 
     <Shell.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+        <!--<ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.ForegroundColor" Value="{OnPlatform WinUI={StaticResource Primary}, Default=White}" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="{AppThemeBinding Dark=#95FFFFFF, Light=#95000000}" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Dark={StaticResource DarkBackground}, Light={StaticResource LightBackground}}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Dark={StaticResource LightBackground}, Light={StaticResource DarkBackground}}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
                 <Setter Property="Shell.TabBarUnselectedColor" Value="{AppThemeBinding Dark=#95FFFFFF, Light=#95000000}" />
-                <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Dark={StaticResource LightBackground}, Light={StaticResource DarkBackground}}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
             </Style>
             <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellItem" ApplyToDerivedTypes="True" />
-        </ResourceDictionary>
+        </ResourceDictionary>-->
     </Shell.Resources>
 
-    <FlyoutItem Title="Home">
-        <ShellContent Title="All" ContentTemplate="{DataTemplate view:MainPage}" />
-    </FlyoutItem>
+    <ShellContent Title="Home"
+                  Route="MainPage"
+                  ContentTemplate="{DataTemplate view:MainPage}" />
 
-    <TabBar>
+    <!--<FlyoutItem Title="Home">
+        
+    </FlyoutItem>-->
+
+    <!--<TabBar>
         <Tab Title="Discuss" Icon="tab_comments">
             <ShellContent Title="All" ContentTemplate="{DataTemplate view:MainPage}" />
-            <!--<ShellContent Title="User" ContentTemplate="{DataTemplate view:SettingsPage}" />-->
+            <ShellContent Title="User" ContentTemplate="{DataTemplate view:SettingsPage}" />
         </Tab>
         <Tab Title="Settings" Icon="tab_gear">
             <ShellContent ContentTemplate="{DataTemplate view:SettingsPage}" />
         </Tab>
-    </TabBar>
+    </TabBar>-->
 
 
 </Shell>
