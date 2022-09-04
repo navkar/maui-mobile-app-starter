@@ -2,6 +2,10 @@
 
 Use this as a base for the Maui Apps
 
+| iOS        | Android           
+| :-------------: |:-------------:
+| ![ios](/screenshots/ios.png)     | ![android](/screenshots/android.png)  
+
 
 ## App Themes
 
